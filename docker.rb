@@ -1,0 +1,2 @@
+class reloj < applicationnRecord
+end
