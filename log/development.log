@@ -685,3 +685,115 @@ Processing by RelojController#show as HTML
 Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.4ms)
 
 
+  [1m[36mActiveRecord::InternalMetadata Load (4.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+Migrating to CreatePeliculas (20250226201014)
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='MiApi'*/[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "peliculas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar, "year" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250226201014') RETURNING "version" /*application='MiApi'*/[0m
+  [1m[36mTRANSACTION (13.7ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='MiApi'*/[0m
+  [1m[36mPelicula Create (7.5ms)[0m  [1m[32mINSERT INTO "peliculas" ("nombre", "year", "created_at", "updated_at") VALUES ('toy story', 2015, '2025-02-26 20:14:40.994488', '2025-02-26 20:14:40.994488') RETURNING "id" /*application='MiApi'*/[0m
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='MiApi'*/[0m
+  [1m[36mPelicula Load (9.0ms)[0m  [1m[34mSELECT "peliculas".* FROM "peliculas" /* loading for pp */ LIMIT 11 /*application='MiApi'*/[0m
+  [1m[36mPelicula Load (1.1ms)[0m  [1m[34mSELECT "peliculas".* FROM "peliculas" WHERE "peliculas"."id" = 1 LIMIT 1 /*application='MiApi'*/[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='MiApi'*/[0m
+  [1m[36mPelicula Destroy (2.0ms)[0m  [1m[31mDELETE FROM "peliculas" WHERE "peliculas"."id" = 1 /*application='MiApi'*/[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='MiApi'*/[0m
+  [1m[36mPelicula Load (3.6ms)[0m  [1m[34mSELECT "peliculas".* FROM "peliculas" /* loading for pp */ LIMIT 11 /*application='MiApi'*/[0m
+  [1m[36mPelicula Load (0.8ms)[0m  [1m[34mSELECT "peliculas".* FROM "peliculas" /* loading for pp */ LIMIT 11 /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (5.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+Migrating to CreatePeliculas (20250226201014)
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='MiApi'*/[0m
+  [1m[35m (5.4ms)[0m  [1m[35mDROP TABLE "peliculas" /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20250226201014' /*application='MiApi'*/[0m
+  [1m[36mTRANSACTION (12.8ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (4.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+Migrating to CreateCarros (20250224194741)
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='MiApi'*/[0m
+  [1m[35m (4.9ms)[0m  [1m[35mDROP TABLE "carros" /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20250224194741' /*application='MiApi'*/[0m
+  [1m[36mTRANSACTION (15.4ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+Migrating to CreateCarros (20250224194741)
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='MiApi'*/[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "carros" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "color" varchar, "marca" varchar, "placa" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250224194741') RETURNING "version" /*application='MiApi'*/[0m
+  [1m[36mTRANSACTION (11.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='MiApi'*/[0m
+Migrating to CreatePeliculas (20250226201014)
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='MiApi'*/[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "peliculas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar, "year" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250226201014') RETURNING "version" /*application='MiApi'*/[0m
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (5.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (7.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (7.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+Migrating to CreatePeliculas (20250226201014)
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='MiApi'*/[0m
+  [1m[35m (2.6ms)[0m  [1m[35mDROP TABLE "peliculas" /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20250226201014' /*application='MiApi'*/[0m
+  [1m[36mTRANSACTION (7.8ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (7.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+Migrating to CreatePeliculas (20250226201014)
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='MiApi'*/[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "peliculas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar, "year" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250226201014') RETURNING "version" /*application='MiApi'*/[0m
+  [1m[36mTRANSACTION (14.6ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+Migrating to CreatePeliculas (20250226201014)
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='MiApi'*/[0m
+  [1m[35m (4.1ms)[0m  [1m[35mDROP TABLE "peliculas" /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20250226201014' /*application='MiApi'*/[0m
+  [1m[36mTRANSACTION (11.9ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+Migrating to CreatePeliculas (20250226203135)
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='MiApi'*/[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "peliculas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar, "year" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250226203135') RETURNING "version" /*application='MiApi'*/[0m
+  [1m[36mTRANSACTION (18.9ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='MiApi'*/[0m
+  [1m[36mPelicula Create (8.8ms)[0m  [1m[32mINSERT INTO "peliculas" ("nombre", "year", "created_at", "updated_at") VALUES ('toy story', 2020, '2025-02-26 20:33:46.224920', '2025-02-26 20:33:46.224920') RETURNING "id" /*application='MiApi'*/[0m
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='MiApi'*/[0m
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='MiApi'*/[0m
+  [1m[36mPelicula Destroy (8.4ms)[0m  [1m[31mDELETE FROM "peliculas" WHERE "peliculas"."id" = 1 /*application='MiApi'*/[0m
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+Migrating to CreatePeliculas (20250226203135)
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='MiApi'*/[0m
+  [1m[35m (3.7ms)[0m  [1m[35mDROP TABLE "peliculas" /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20250226203135' /*application='MiApi'*/[0m
+  [1m[36mTRANSACTION (11.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='MiApi'*/[0m
